@@ -1,0 +1,4 @@
+
+RewriteEngine On
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteRule ^api/(.*)$ api.php?cmd=$1
